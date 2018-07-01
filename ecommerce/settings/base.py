@@ -39,11 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'accounts',
-    # 'product',
-    # 'cart',
-    # 'checkout',
-    # 'search',
-    # 'storages',
+    'product',
+    'cart',
+    'checkout',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -120,4 +119,5 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+STRIPE_PULISHABLE = os.environ.get('STRIPE_PULISHABLE')
+STRIPE_SECRET = os.environ.get('STRIPE_SECRET')
