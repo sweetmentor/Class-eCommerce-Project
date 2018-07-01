@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/sweetmentor/my-ecommerce-app.svg)](https://travis-ci.org/sweetmentor/my-ecommerce-app)
