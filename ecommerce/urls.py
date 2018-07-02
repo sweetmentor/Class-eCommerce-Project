@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from accounts import urls as accounts_urls
+from product import views
 from product import urls as products_urls
 from cart import urls as carts_urls
 from checkout import urls as checkout_urls
@@ -30,6 +31,7 @@ urlpatterns = [
     path('accounts/', include(accounts_urls)),
     path('cart/', include(carts_urls)),
     path('checkout/', include(checkout_urls)),
+    path('search/', views.do_search, name='search'),
     path('', include(products_urls)),
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

@@ -1,11 +1,14 @@
 {% extends 'base.html' %} {
 % load static from staticfiles %} 
 {% block content %}
-  <form name="myform" method="GET" action="*"> 
- <input type="text" name="match" placeholder="item" />
- <button type="submit" value="match">Search</button>
-</form> 
+  <div class="container">
+        <form action="{% url 'search' %}" method="get">
+            <input type="text" name="query">
+            <button type="submit">Search</button>
+        </form>
 
+        
+    </div>
 <table class="table">
 <thead>
     <tr>

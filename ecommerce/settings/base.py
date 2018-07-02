@@ -119,5 +119,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-STRIPE_PULISHABLE = os.environ.get('STRIPE_PULISHABLE')
-STRIPE_SECRET = os.environ.get('STRIPE_SECRET')
+STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET = os.environ.get('STRIPE_SECRET_KEY')
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"

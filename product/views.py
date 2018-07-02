@@ -6,7 +6,6 @@ def get_products(request):
     products = Product.objects.all()
     return render(request, "products/products.html", {'products': products})
     
-# def search_products(request):
-#     match = request.GET.get('match')
-#     products = Product.filter(name__icontains=request.GET['query'])
-#     return render(request, "products/products.html", {"products": products})    
+def do_search(request):
+    products = Product.objects.filter(name__icontains=request.GET['query'])
+    return render(request, "products/products.html", {"products": products})

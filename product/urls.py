@@ -1,9 +1,9 @@
 from django.urls import path
-from product.views import get_products
+from product.views import get_products, do_search
 
 
 urlpatterns = [
     path('', get_products, name='products'),
-    # path('search_products/', search_products, name='match'),
-    
+    path('search/', do_search, name='search'),
+   
 ]
